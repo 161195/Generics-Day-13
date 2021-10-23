@@ -6,8 +6,8 @@ namespace Generics_problem
     {
         static void Main(string[] args)
         {
-           double Result=Generics.MaxNumber(15.20,20.25,25.15);
-            Console.WriteLine("{0} is max number", Result);
+           string Result=Generics.MaxNumber("mayuri","pratiksha","amit");
+            Console.WriteLine("{0} is max value", Result);
             Console.ReadLine();
 
         }

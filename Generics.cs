@@ -8,19 +8,19 @@ namespace Generics_problem
 {
     class Generics
     {
-        public static double MaxNumber (double firstNumber, double secondNumber,double thirdNumber)
+        public static string MaxNumber (string first, string second,string third)
         {
-            if (firstNumber.CompareTo(secondNumber)>0 && firstNumber.CompareTo(thirdNumber)>0)
+            if (first.CompareTo(second)>0 && first.CompareTo(third)>0)
             {
-                return firstNumber;
+                return first;
             }
-            if (secondNumber.CompareTo(firstNumber) > 0 && secondNumber.CompareTo(thirdNumber)>0)
+            if (second.CompareTo(first) > 0 && second.CompareTo(third)>0)
             {
-                return secondNumber;
+                return second;
             }
-            if(thirdNumber.CompareTo(firstNumber)>0 && thirdNumber.CompareTo(secondNumber)>0)
+            if(third.CompareTo(first)>0 && third.CompareTo(second)>0)
             {
-                return thirdNumber;
+                return third;
             }
             return default;
         }
