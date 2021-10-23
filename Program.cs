@@ -6,7 +6,7 @@ namespace Generics_problem
     {
         static void Main(string[] args)
         {
-            int Result=Generics.MaxNumber(15,20,25);
+           double Result=Generics.MaxNumber(15.20,20.25,25.15);
             Console.WriteLine("{0} is max number", Result);
             Console.ReadLine();
 
