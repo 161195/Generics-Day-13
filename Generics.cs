@@ -8,35 +8,32 @@ namespace Generics_problem
 {
     class Generics<T> where T: IComparable
     {
-        private T first, second, third;                //instance variable
-        public Generics (T first, T second, T third)   //constructor
+        public T[] value;  //instance variable
+
+        public Generics(T[] value)      //constructor
         {
-            this.first = first;
-            this.second = second;
-            this.third = third;
+            this.value = value;
         }
-        public static T MaxValue(T first,T second , T third)
-        { 
-            
-            if (first.CompareTo(second)>0 && first.CompareTo(third)>0)
-            {
-                return first;                                  ////returning value if condition is true
-            }
-            if (second.CompareTo(first) > 0 && second.CompareTo(third)>0)
-            {
-                return second;
-            }
-            if(third.CompareTo(first)>0 && third.CompareTo(second)>0)
-            {
-                return third;
-            }
-            return default;
-        }
-        public T MaximumValue()
+        public T[] Sort (T[] values)
         {
-            Generics<T>.MaxValue(this.first, this.second, this.third);
-            T max = Generics<T>.MaxValue(this.first, this.second, this.third);
+            Array.Sort(values);
+            return values;
+        }
+        public T MaxValue(params T[]values)
+        {
+            var sorted_values = Sort(values);
+            return sorted_values[^1];
+        }
+        public T MaxMethod()
+        {
+            var max = MaxValue(this.value);
             return max;
         }
+        public void PrintMaxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine("Maximum value is " + max);
+        }
+
     }
 }
